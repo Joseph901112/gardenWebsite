@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huwei Gardening 產品</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <script src="../js/bootstrap.bundle.js"></script>
+    <style>
+              body{
+        background-color: #f5f5f5;
+      }
+
+      #main{
+        /*將畫面最大寬度設定為畫面90%，為了讓container會隨著畫面比例變化*/
+        max-width: 100%;
+        flex:1;}
+        .product-card{
+            width: 16rem; height: 20rem;
+        }
+        .wrapper {
+           display: flex;/*彈性布局 */
+        flex-direction: column;/*垂直排列*/
+         min-height: 80vh;/*最小高度必須是整個視窗*/
+      }
+    </style>
+</head>
+
+<body>
+        <div class="wrapper">
+            <!-- 導覽列 -->
+            <nav class="navbar p-0"style="background-color: #5E9E4D;">
+                    <div class="container-fluid d-flex justify-content-between align-items-center w-100">
+
+            <a class="navbar-brand" href="#">
+                <img src="../img/Logo.png" alt="" class="d-inline-block align-text-top" style="width:200px;height:auto;">     
+            </a>
+
+            <ul class="nav" >
+                 
+                  <li class="nav-item "> 
+                      <a class="nav-link text-light "  href="../Home.html" >首頁</a>
+                  </li>
+          
+                  <li class="nav-item "> 
+                      <a class="nav-link text-light active" href="#" >商品</a>
+                  </li>
+                  <li class="nav-item "> 
+                      <a class="nav-link text-light" href="../Home.html#service">服務項目</a>
+                  </li>
+                  <li class="nav-item "> 
+                      <a class="nav-link text-light" href="../Home.html#QA">常見問題</a>
+                  </li>
+                  
+                  <li class="nav-item"> 
+                      <a class="nav-link text-light" href="../Home.html#contact"> 聯絡我們</a>
+                  </li>
+
+            </ul>
+            <a class="navbar-brand" href="../cart.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="30px" fill="30px" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                </svg>
+      
+            </a>
+              </div>
+          <!-- </div> -->
+            </nav>
+                            <!-- 主要內容 -->
+                            <div class="d-flex justify-content-center py-3 mx-5" id="main" style="background-color: #e6f2e6;">
+                                <!-- <div class="d-flex w-100" >style="max-width: 100%;" -->
+                                    <!-- 左邊導覽列 -->
+                                    <div style="flex:2">
+
+                                        <div class="card" style="width: 90%;">
+                                            <div class="card-header">
+                                            商品種類
+                                            </div>
+                                            <ul class="list-group list-group-flush">
+                                            <li class="list-group-item list-group-item-success"><a href="#" class="text-decoration-none text-dark">室內植物</a></li>
+                                            <li class="list-group-item list-group-item-success"><a href="./product室外植物 .html" class="text-decoration-none text-dark">室外植物</a></li>
+                                            <li class="list-group-item list-group-item-success"><a href="./product園藝用品.html" class="text-decoration-none text-dark">園藝用品</a></li>
+
+                                            </ul>
+
+
+                                        </div>
+                                    </div>
+                                    <!-- 右邊商品列 -->
+                                    <div class="d-flex flex-column "style="flex:10; background-color: #d0e8d0; max-height:100%">
+
+                                        <div><h3>商品/室內植物 </h3></div>
+                                        <div class="d-flex flex-wrap justify-content-left">
+                                                <!-- 卡片1龜背芋 -->
+                                                <div class="card m-3 product-card "  id="product-1" style="height: 380px; overflow: hidden;">
+                                                    <div class="h-60 overflow-hidden" style="background-color: #d1e7dd;">
+                                                        <img src="../img/龜背芋.jpg" class="card-img-top h-100 w-100 object-fit-cover" alt="...">
+                                                    </div>
+                                                    <div class="card-body h-50" >
+                                                        <h4 class="card-text"> 龜背芋</h4>
+                                                        <p class="card-text ">居家佈置、辦公空間都超適合，網美最愛<br>$500</p>
+                                                            <button class="add-to-cart">加入購物車</button>
+
+                                                    </div>
+                                                </div>
+                                                <!-- 卡片2虎尾蘭 -->
+                                                <div class="card m-3 product-card " id="product-2" style="height: 380px; overflow: hidden;">
+                                                    <div class="h-60 overflow-hidden" style="background-color: #d1e7dd;">
+                                                        <img src="../img/虎尾蘭.avif" class="card-img-top h-100 w-100 object-fit-cover" alt="...">
+                                                    </div>
+                                                    <div class="card-body h-50" >
+                                                        <h4 class="card-text">  虎尾蘭</h4>
+                                                        <p class="card-text ">被譽為「天然清道夫」，辦公室與臥室首選<br>$300</p>
+                                                            <button class="add-to-cart">加入購物車</button>
+
+                                                    </div>
+                                                </div>
+                                                <!-- 卡片3波士頓腎蕨 -->
+                                                <div class="card m-3 product-card " id="product-3" style="height: 380px; overflow: hidden;">
+                                                    <div class="h-60 overflow-hidden" style="background-color: #d1e7dd;">
+                                                        <img src="../img/波士頓蕨.jpg" class="card-img-top h-100 w-100 object-fit-cover" alt="...">
+                                                    </div>
+                                                    <div class="card-body h-50" >
+                                                        <h4 class="card-text"> 波斯頓腎蕨</h4>
+                                                        <p class="card-text ">浴室、陽台、窗邊都能展現自然氛圍<br>$420</p>
+                                                            <button class="add-to-cart">加入購物車</button>
+
+                                                    </div>
+                                                </div>
+                                                <!--卡片4火鶴花-->
+                                                <div class="card m-3 product-card " id="product-4"style="height: 380px; overflow: hidden;">
+                                                    <div class="h-60 overflow-hidden" style="background-color: #d1e7dd;">
+                                                        <img src="../img/火鶴花.webp" class="card-img-top h-100 w-100 object-fit-cover" alt="...">
+                                                    </div>
+                                                    <div class="card-body h-50" >
+                                                        <h4 class="card-text">火鶴花</h4>
+                                                        <p class="card-text "> 提升戀愛運的風水植物，節慶送禮也很合適<br>$500</p>
+                                                            <button class="add-to-cart">加入購物車</button>
+
+                                                    </div>
+                                                </div>
+                                                <!-- 卡片5空氣鳳梨 -->
+                                                <div class="card m-3 product-card " id="product-5"style="height: 380px; overflow: hidden;">
+                                                    <div class="h-60 overflow-hidden" style="background-color: #d1e7dd;">
+                                                        <img src="../img/空氣鳳梨.webp" class="card-img-top h-100 w-100 object-fit-cover" alt="...">
+                                                    </div>
+                                                    <div class="card-body h-50" >
+                                                        <h4 class="card-text"> 空氣鳳梨</h4>
+                                                        <p class="card-text ">- 適合小空間、創意擺飾，深受設計師喜愛<br>$300</p>
+                                                            <button class="add-to-cart">加入購物車</button>
+
+                                                    </div>
+                                                </div>
+
+
+                                        </div>
+
+
+                                    </div>                                             
+                                <!-- </div> -->
+                            </div>
+                </div>
+            </div>
+        </div>
+  <a href="../cart.html">查看購物車</a>
+
+  <script src="../product.js"></script>
+  <script src="../cart.js"></script>
+              <!-- 底部小bar -->
+       <nav class="navbar p-0 justify-content-center">
+
+              <ul class="nav ">
+          
+                  <li class="nav-item"> 
+                      <a class="nav-link active text-dark" href="../Home.html" >首頁</a>
+                  </li>
+          
+                  <li class="nav-item "> 
+                      <a class="nav-link text-dark" href="#">商品</a>
+                  </li>
+                  <li class="nav-item "> 
+                      <a class="nav-link text-dark" href="../qa.html">常見問題</a>
+                  </li>
+                  <li class="nav-item "> 
+                      <a class="nav-link text-dark" href="../contact.html"> 聯絡我們</a>
+                  </li>
+              </ul>
+          
+      </nav>
+
+
+        <!-- footer -->
+       <div class="d-flex justify-content-between align-items-center" style="background-color: #5e9e4d;">
+          <div class="container m-3 p-3"style=" width: 340px; height: 280px;">
+            <h3 class="my-3 text-light" >Huwei Gardening</h3>
+            <p class="my-3 text-light" >Bringing nature into your space with healthy plants and simple care tips. Grow with us.</p>
+            <div class="row my-3">
+              <div class="col-4 p-0"><img src="../img/Facebook.png"></div>
+              <div class="col-4 p-0"><img src="../img/Instagram.png"></div>
+              <div class="col-4 p-0"><img src="../img/Twitter.png"></div>
+
+
+            </div>
+
+          </div>
+          <!-- <div  style="background-color: lightblue; width: 140px; height: 140px;"></div> -->
+          <div  class="m-3"style=" width: 340px; height: 120px;">
+            <h3 class="text-light">聯絡我們</h3>
+            <p class="text-light">電話:+886 00-000-0000</p>
+            <p class="text-light">Email:HuweiGardening@gmail.com</p>
+          </div>
+
+       </div>
+</body>
+</html>

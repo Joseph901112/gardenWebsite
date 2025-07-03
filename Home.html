@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huwei Gardening</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <script src="../js/bootstrap.bundle.js"></script>
+    <style>
+      body{
+        background-color: #f5f5f5;
+          height:100%;
+
+      }
+
+      #main{
+        /*將畫面最大寬度設定為畫面90%，為了讓container會隨著畫面比例變化*/
+        max-width: 90%;
+        flex:1;
+      }
+            /*為了sticky footer 所創建的*/
+    .wrapper {
+           display: flex;/*彈性布局 */
+        flex-direction: column;/*垂直排列*/
+         min-height: 100vh;/*最小高度必須是整個視窗*/
+    }
+      .carousel-item > img {
+        min-width: 100%;
+      }
+      #carouselContainer{
+
+        overflow: hidden;/*為了讓圖片不超出container*/
+        max-height: 50vh;/*最大長度保持在視窗高度50%*/
+        max-width:100%;/*最大寬度保持父元素100%*/
+        object-fit: cover; /* 保持比例但填滿容器 */
+        padding: 0 ;
+        margin: 0 ;
+      }
+      .carousel-control-wrapper> .carousel-control-next {
+        position: absolute;/*為了將按鈕下移，將其改為絕對位置，不知為何相對位置調整不了位置*/
+        top: 45%;
+        right: 20px; /* 根據需求改變 */
+        opacity:1 ;
+      }
+      .carousel-control-wrapper> .carousel-control-prev {
+        position: absolute;/*為了將按鈕下移，將其改為絕對位置，不知為何相對位置調整不了位置*/
+        top: 45%;
+        left:20px; 
+        opacity:1 ;
+      }
+      .productTypeCard{
+        width:200px;
+      }
+      .service-card{
+        width: 350px;
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+   <!-- 導覽列 -->
+      <nav class="navbar p-0"style="background-color: #5E9E4D;">
+                    <div class="container-fluid d-flex justify-content-between align-items-center w-100">
+
+            <a class="navbar-brand" href="#">
+                <img src="./img/Logo.png" alt="" class="d-inline-block align-text-top" style="width:200px;height:auto;">     
+            </a>
+
+            <ul class="nav" >
+                 
+                  <li class="nav-item "> 
+                      <a class="nav-link text-light active" href="#" >首頁</a>
+                  </li>
+          
+                  <li class="nav-item "> 
+                      <a class="nav-link text-light" href="./product/product室內植物.html">商品</a>
+                  </li>
+                  <li class="nav-item "> 
+                      <a class="nav-link text-light" href="#service">服務項目</a>
+                  </li>
+                  <li class="nav-item "> 
+                      <a class="nav-link text-light" href="#QA">常見問題</a>
+                  </li>
+                  
+                  <li class="nav-item "> 
+                      <a class="nav-link text-light" href="#contact"> 聯絡我們</a>
+                  </li>
+
+            </ul>
+            <a class="navbar-brand" href="../cart.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="30px" fill="30px" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                </svg>
+      
+            </a>              </div>
+          <!-- </div> -->
+      </nav>
+      <!-- 主頁內容 -->
+      <div class="container " id="main">
+
+
+      
+ 
+      <!-- 輪播器 -->
+      <div class="container d-flex justify-content-center px-0" id="carouselContainer">
+          <div
+            id="carouselControls"
+            class="carousel d-flex align-items-center"
+            data-bs-ride="carousel"
+          >
+            <!-- 輪播指示器 -->
+          <div class="container-fluid py-2">
+    
+            <!-- 用來包裹輪播的內容 -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./img/carousel-picture1.jpg"
+                    class="d-block w-100 px-0"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./img/carousel-picture2.jpg"
+                    class="d-block w-100 px-0"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./img/carousel-picture3.jpg"
+                    class="d-block w-100 px-0"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="carousel-control-wrapper">
+                <button
+                  class="carousel-control-prev rounded"
+                  type="button"
+                  data-bs-target="#carouselControls"
+                  data-bs-slide="prev"
+                  style="background-color: #5e9e4d; height: 40px; width: 40px"
+
+                >
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+
+              <div class="carousel-control-wrapper">
+                <button
+                  class="carousel-control-next rounded"
+                  type="button"
+                  data-bs-target="#carouselControls"
+                  data-bs-slide="next"
+                  style="background-color: #5e9e4d; height: 40px; width: 40px"
+                >
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+      <!-- 商品卡組 -->
+      <div class="container w-100 py-2 my-5 d-flex flex-column ">
+          <h2>商品種類</h2>
+          <div class="d-flex flex-crow flex-wrap justify-content-center ">
+              <div class="card m-2 productTypeCard " style="width: 200px;">
+                <img src="./img/product-type1.png" alt="">
+                <p class="text-center">室內植物</p>
+                </div>
+              <div class="card m-2 productTypeCard" style="width: 200px;">
+                <img src="./img/product-type2.png" alt="">
+                <p class="text-center">室外植物</p>             
+              </div>
+              <div class="card m-2 productTypeCard" style="width: 200px;">
+                <img src="./img/product-type3.png" alt="">
+                <p class="text-center">園藝用品</p>
+              </div>
+              <div class="card m-2 productTypeCard" style="width: 200px;">
+                <img src="./img/product-type4.png" alt="">
+                <p class="text-center">灌木叢</p>
+              </div>
+              <div class="card m-2 productTypeCard" style="width: 200px;">
+                <img src="./img/product-type5.png" alt="">
+                <p class="text-center">花卉</p>            </div>
+              <div class="card m-2 productTypeCard" style="width: 200px;">
+                <img src="./img/product-type6.png" alt="">
+                <p class="text-center">種子</p>
+              </div>
+          </div>
+
+
+            
+      </div>
+      <!-- 服務項目組 -->
+      <div class="container d-flex  flex-column justify-content-center py-2 my-5">
+           <h2 id="service">服務項目</h2>
+           <div class="d-flex flex-row">
+
+                  <div class="d-flex flex-row justify-content-between align-items-start" style="width:100%;height:auto; ">
+                        <!-- 服務卡片 -->
+                        <div class="d-flex flex-column"style="width:25% ;height:450px;background-color:#f6fff5;border: 2px solid #4e944f;border-radius:20px; overflow: hidden;">
+                            <div style="height:60% ; background-color: white;  overflow: hidden;">
+                                <img src="./img/garden-design.jpg" class="img-fluid" style="object-fit: cover;"alt="">
+                            </div>
+                            <div style="height:50%;">
+
+                                <div class="mx-4">
+                                    <h4 class="text-success my-3">🌿 庭院美化</h4>
+                                    <p>透過專業的園藝設計師規劃，我們會根據日照、排水、動線與風格偏好，
+                                        打造獨一無二的戶外空間。服務包括植物配置、鋪面設計、水景造景與生態營造，讓庭院兼具美觀與功能性。
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- 服務卡片 -->
+                        <div class="d-flex flex-column"style="width:25% ;height:450px;background-color:#f6fff5;border: 2px solid #4e944f;border-radius:20px; overflow: hidden;">
+                            <div style="height:60% ; background-color: white;  overflow: hidden;">
+                                <img src="./img/園藝維護.jpg" class="img-fluid" style="object-fit: cover;"alt="">
+                            </div>
+                            <div style="height:50%;">
+
+                                <div class="mx-4">
+                                    <h4 class="text-success my-3">🧤 定期維護</h4>
+                                    <p>我們提供定期的植物修剪、施肥與灌溉管理服務，確保花草樹木維持健康狀態。專業團隊也會定期檢查灌溉系統與防治病蟲害，讓您的庭園四季如春。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 服務卡片 -->
+                         <div class="d-flex flex-column"style="width:25% ;height:450px;background-color:#f6fff5;border: 2px solid #4e944f;border-radius:20px; overflow: hidden;">
+                            <div style="height:60% ; background-color: white;  overflow: hidden;">
+                                <img src="./img/廢棄物處理.jpg" class="img-fluid" style="object-fit: cover;"alt="">
+                            </div>
+                            <div style="height:50%;">
+
+                                <div  class="mx-4">
+                                    <h4 class="text-success my-3">🍂 植物廢棄物處理</h4>
+                                     <p>我們提供高效率的植物廢棄物分類與清運服務，協助清理修剪後的枝葉與落葉，避免病蟲害滋生。部分廢棄物也會進行再利用（如製成堆肥），實踐永續綠化。</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+                </div>
+           </div>
+                 
+
+      </div>
+      <!-- 常見問題手風琴 -->
+      <div class="container d-flex flex-column justify-content-center  py-2 my-5">
+        <h2 id="QA">常見問題</h2>
+
+            <!-- 手風琴 -->
+            <div class="accordion accordion-flush " >
+                  <!-- 手風琴item -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        🌱 1. 我家陽台只有早上有陽光，還適合種植物嗎？                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">可以的！早上的陽光其實很溫和，非常適合種一些半日照或耐陰的植物，像是文竹、龜背芋、虎尾蘭、山蘇都很適合。如果想要一點繽紛感，鳳梨花、彩葉草或波斯頓蕨也是不錯的選擇。我們可以幫您規劃專屬的陽台綠景，讓小空間也充滿綠意！
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 手風琴item -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        🌿 2. 庭院裡老是有雜草，怎麼處理比較有效？
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">雜草的處理其實要從根源預防。我們會先做一次完整除草與除根，接著使用透氣抑草布+鋪面設計（像是碎石、卵石或木屑），再搭配適合的地被植物，就能大幅減少雜草生長。如果真的需要，我們也有提供有機除草方案，對寵物、小孩都安全喔。</div>
+                    </div>
+                  </div>
+                  <!-- 手風琴item -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        🌸 3. 園藝設計會不會很貴啊？需要先付費諮詢嗎？
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">不會的，我們提供免費初步諮詢，讓您先了解整體的想法與預算方向。我們會依照空間大小、植物種類、施工內容等，提供彈性化報價，有些小型綠化專案甚至只需幾千元起跳。如果您預算有限，我們也可以幫您分階段施作，一步步打造理想花園。</div>
+                    </div>
+                  </div>
+                  <!-- 手風琴item -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                       ☀️ 4. 植物都會枯掉，我是不是很不會照顧？
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">不不～很多人都有這種困擾，通常是植物不適合環境或澆水節奏沒拿捏好。我們會依照您的生活型態與空間特性，幫您挑選好照顧又耐活的植物。像是虎尾蘭、長壽花、多肉植物等都很適合忙碌的生活，而且有些植物其實更喜歡被「冷落」一點呢 😄</div>
+                    </div>
+                  </div>
+                  <!-- 手風琴item -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        🧤 5. 安裝好之後會幫忙維護嗎？
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">當然會！我們提供定期維護服務，包括修剪、施肥、病蟲害防治與灌溉系統檢查，也有單次救急服務（例如植物狀況不好、季節轉換整理）。您可以選擇每月、雙月或季節性服務，完全依照您的需求調整。</div>
+                    </div>
+                  </div>
+
+
+            </div>
+        </div>
+        <!-- 表單填寫   -->
+        <div class="container d-flex flex-column py-2 my-5 justify-content-center">
+            <h2 id="contact">聯絡我們</h2>
+              <form>
+                  <div class="mb-3">
+                    <label for="inputName" class="form-label">姓名</label>
+                    <input type="text" class="form-control w-50" id="inputName" aria-describedby="mameHelp">
+                    <div id="nameHelp" class="form-text">請填入身分證上姓名</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="inputPhone" class="form-label">電話</label>
+                    <input type="number" class="form-control w-50" id="inputPhone" >
+                  </div>
+                  <div class="mb-3">
+                    <label for="inputEmail" class="form-label">電子郵件</label>
+                    <input type="text" class="form-control w-50" id="inputEmail" >
+                  </div>
+                  <div class="mb-3">
+                    <label for="textArea" class="form-label">聯絡內容</label>
+                    <textarea class="form-control w-50" id="textArea" rows="6" placeholder="請輸入內容.">
+                    </textarea>
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+      </div><!--main尾 -->
+      
+    </div>
+      <!-- 底部小bar -->
+       <nav class="navbar p-0 justify-content-center">
+
+              <ul class="nav ">
+          
+                  <li class="nav-item"> 
+                      <a class="nav-link active text-dark" href="#" >首頁</a>
+                  </li>
+          
+                  <li class="nav-item "> 
+                      <a class="nav-link text-dark" href="#">商品</a>
+                  </li>
+                  <li class="nav-item "> 
+                      <a class="nav-link text-dark" href="#">常見問題</a>
+                  </li>
+                  <li class="nav-item "> 
+                      <a class="nav-link text-dark" href="#"> 聯絡我們</a>
+                  </li>
+              </ul>
+          
+      </nav>
+
+
+  <!-- footer -->
+       <div class="d-flex justify-content-between align-items-center" style="background-color: #5e9e4d;">
+          <div class="container m-3 p-3"style=" width: 340px; height: 280px;">
+            <h3 class="my-3 text-light" >Huwei Gardening</h3>
+            <p class="my-3 text-light" >Bringing nature into your space with healthy plants and simple care tips. Grow with us.</p>
+            <div class="row my-3">
+              <div class="col-4 p-0"><img src="./img/Facebook.png"></div>
+              <div class="col-4 p-0"><img src="./img/Instagram.png"></div>
+              <div class="col-4 p-0"><img src="./img/Twitter.png"></div>
+
+
+            </div>
+
+          </div>
+          <!-- <div  style="background-color: lightblue; width: 140px; height: 140px;"></div> -->
+          <div  class="m-3"style=" width: 340px; height: 120px;">
+            <h3 class="text-light">聯絡我們</h3>
+            <p class="text-light">電話:+886 00-000-0000</p>
+            <p class="text-light">Email:HuweiGardening@gmail.com</p>
+          </div>
+
+       </div>
+  </body>
+</html>
