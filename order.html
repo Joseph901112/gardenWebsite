@@ -78,27 +78,22 @@
       </nav>
       <!-- 主頁內容 -->
       <div class="container">
-        <h3 class="m-3">購物車</h3>
+        <h3 class="m-3">查詢訂單編號</h3>
       </div>
       <div class="container " id="main">
-        <div class="container d-flex justify-content-left px-0" id="cartContainer">
+<!--  搜尋區 -->
+  <div class="input-group mb-4">
+    <input type="text" id="order-search" class="form-control" placeholder="請輸入訂單編號" />
+    <button id="search-btn" class="btn btn-success">查詢</button>
+  </div>
 
-          <ul class="border p-4 bg-light rounded w-100"id="cart-list"></ul>
+  <!--  顯示結果 -->
+  <div id="result" class="border p-4 bg-light rounded"></div>
 
-
-      
- 
-     
-      
-      
-      </div><!--cartContainer尾 -->
 
 
      </div><!--main尾 -->
-           <div class="container "style="text-align: right;">
-                <h3 id="total-price">總金額：NT$0</h3>
-            <button id="checkout-btn" class="btn btn-primary">我要結帳</button>
-      </div>
+
       <!-- 底部小bar -->
        <nav class="navbar p-0 justify-content-center">
 
@@ -144,11 +139,10 @@
           </div>
 
        </div>
-          <script src="cart.js"></script>
-          <script src="renderCart.js"></script>
 
-          <script src="orderStorage.js"></script>
-          <script src="order.js"></script>
+  <script src="orderSearch.js">
+   
+  </script>
 
 
 

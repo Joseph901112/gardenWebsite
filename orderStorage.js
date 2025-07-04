@@ -9,3 +9,4 @@
 function loadOrders() {
   return JSON.parse(localStorage.getItem('orders')) || [];
 }
+
