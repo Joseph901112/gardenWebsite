@@ -12,7 +12,8 @@ function checkout() {
   const order = {
     id: Date.now(),
     items: [...cart],
-    total: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
+    totalQuantity :cart.reduce((sum,item )=> sum + item.quantity,0),
+    totalPrice: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
     createdAt: new Date().toISOString()
   };
 
@@ -20,7 +21,7 @@ function checkout() {
 //   localStorage.removeItem('cart');
 cart = [];
 saveCart(cart);
-debugger;
+
   renderCart();
 
   alert(`✅ 訂單成立！編號：${order.id}`);

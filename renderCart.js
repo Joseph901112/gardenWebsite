@@ -1,6 +1,8 @@
 let cart = loadCart(); // 載入購物車?為了讀取購物車資料並渲染到html上
 //選染購物車
 function renderCart() {
+cart = loadCart(); // 載入購物車?為了讀取購物車資料並渲染到html上
+
   const cartList = document.getElementById('cart-list');//擷取card-list 也就是購物車內的東西
   const totalPriceEl = document.getElementById('total-price');//擷取總價格
 cartList.innerHTML = '';//每輪都要淨空購物車，以確保刪除時不會出現重複項
@@ -38,7 +40,10 @@ cart.forEach(item => {
 
     const price = document.createElement('h3'); // 🆕 使用 h3
     price.classList.add('text-muted', 'mb-0'); // 淡灰顏色 & 去除下邊距
-    price.textContent = `NT$${subtotal}`;
+    debugger
+    price.textContent = ``;
+    
+    price.textContent = `數量${item.quantity}件`+`    `+`NT$${subtotal}`;//子總價
 
     info.appendChild(name);
     info.appendChild(price);
@@ -110,7 +115,7 @@ document.getElementById('cart-list').addEventListener('click', (e) => {
   saveCart(cart);
   renderCart();//重新渲染
 });
-// 5️⃣ 如果你要跨分頁同步，也可以放這裡
+//  如果你要跨分頁同步，也可以放這裡
 window.addEventListener("storage", (event) => {
   if (event.key === "cart") {
     cart = loadCart();
