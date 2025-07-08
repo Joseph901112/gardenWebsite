@@ -25,7 +25,6 @@
       resultBox.innerHTML = `
         <h5> 訂單成立</h5>
         <p> 編號：${order.id}</p>
-        <p> 時間：${new Date(order.createdAt).toLocaleString()}</p>
         <p> 總金額：NT$${order.totalPrice}</p>
         <p> 商品清單：</p>
         <ul>
